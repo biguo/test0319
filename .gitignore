@@ -14,3 +14,14 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+public/system/
+
+# Ignore deploy config
+config/database.yml
+config/deploy.rb
+config/deploy/*.rb
+
+*.rb~
+
+/.idea/*
+/bin/*
