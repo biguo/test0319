@@ -7,6 +7,10 @@
     = csrf_meta_tags
     = yield(:head)
   %body
+    %p.notice
+      = notice
+    %p.notice
+      = alert
     #wrapper
       = render :partial => 'component/navbar_header'
       #page-wrapper{:style => 'margin:0;'}
