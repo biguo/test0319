@@ -2,11 +2,14 @@
 %html
   %head
     %title Test0319
+    %meta{:name => 'description',:content => ''}
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
     = yield(:head)
   %body
-  = yield
+    #wrapper
+      = render :partial => 'component/navbar_header'
+      #page-wrapper{:style => 'margin:0;'}
+        = yield
   = javascript_include_tag 'application', 'data-turbolinks-track' => true
-
 
