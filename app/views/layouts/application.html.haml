@@ -7,13 +7,12 @@
     = csrf_meta_tags
     = yield(:head)
   %body
-    %p.notice
-      = notice
-    %p.notice
-      = alert
-    #wrapper
-      = render :partial => 'component/navbar_header'
-      #page-wrapper{:style => 'margin:0;'}
-        = yield
+    = render :partial => 'component/notice'
+    = render :partial => 'component/navbar_header'
+
+    #page-wrapper{'ng-app'=>''}
+      .container
+        .row
+          = yield
   = javascript_include_tag 'application', 'data-turbolinks-track' => true
 
